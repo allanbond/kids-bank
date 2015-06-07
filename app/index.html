@@ -24,28 +24,41 @@
     <form class="form-horizontal">
       <div class="form-group">
         <div class="col-md-12">
-          <input type="text" class="form-control" placeholder="Name"/>
+          <input type="text" class="form-control" placeholder="Name" ng-model="name"/>
         </div>
       </div>
       <div class="form-group">
         <div class="col-md-12">
-          <input type="date" class="form-control" placeholder="Date of Birth"/>
+          <input type="date" class="form-control" placeholder="Date of Birth" ng-model="dob"/>
         </div>
       </div>
       <div class="form-group">
         <div class="col-md-12">
-          <input type="currency" class="form-control" placeholder="Allowance"/>
+          <input type="currency" class="form-control" placeholder="Allowance" ng-model="allowance"/>
         </div>
       </div>
       <div class="form-group">
         <div class="col-md-12">
-          <input type="url" class="form-control" placeholder="Avatar URL"/>
+          <input type="url" class="form-control" placeholder="Avatar URL" ng-model="avatar"/>
         </div>
       </div>
     </form>
     
-    <div>
-      {{}}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2">
+          <img ng-src="{{avatar}}"/>
+        </div>
+        <div class="col-xs-4">
+          {{name}}
+        </div>
+        <div class="col-xs-3">
+          {{dob | date: 'MM/dd/yyyy'}} 
+        </div>
+        <div class="col-xs-3">
+          {{allowance}}
+        </div>  
+      </div>
     </div>
     
 
