@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="kidsBankApp">
@@ -20,36 +21,33 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">kidsBank</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <div class="col-md-12">
+          <input type="text" class="form-control" placeholder="Name"/>
         </div>
       </div>
-    </div>
-
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <div class="form-group">
+        <div class="col-md-12">
+          <input type="date" class="form-control" placeholder="Date of Birth"/>
+        </div>
       </div>
+      <div class="form-group">
+        <div class="col-md-12">
+          <input type="currency" class="form-control" placeholder="Allowance"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-12">
+          <input type="url" class="form-control" placeholder="Avatar URL"/>
+        </div>
+      </div>
+    </form>
+    
+    <div>
+      {{}}
     </div>
-
+    
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
