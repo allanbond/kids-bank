@@ -22,53 +22,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container-fluid kb-title-bar">
-      <div class="row">
-        <div class="col-xs-12"><h3 class="kb-title">Add an Account</h3></div>
-      </div>
-    </div>
-    <form class="form-horizontal clearfix">
-      <div class="form-group">
-        <div class="col-md-12">
-          <input type="text" class="form-control" placeholder="Name" ng-model="name"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-md-12">
-          <input type="date" class="form-control" placeholder="Date of Birth" ng-model="dob"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-md-12">
-          <input type="currency" class="form-control" placeholder="Allowance" ng-model="allowance"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-md-12">
-          <input type="url" class="form-control" placeholder="Avatar URL" ng-model="avatar"/>
-        </div>
-      </div>
-      <div>
-        <button class="btn btn-link pull-right">Save</button>
-      </div>
-    </form>
-        
-    <div class="container-fluid kb-profile">
-      <div class="row">
-        <div class="col-xs-2">
-          <img ng-src="{{avatar}}" class="kb-avatar" />
-        </div>
-        <div class="col-xs-3">
-          {{name}}
-        </div>
-        <div class="col-xs-3">
-          {{dob | date: 'MM/dd/yyyy'}} 
-        </div>
-        <div class="col-xs-4">
-          {{allowance}}
-        </div>  
-      </div>
-    </div>
+    <ng-view></ng-view>
     
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -99,7 +53,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/account-service.js"></script>
-        <script src="scripts/services/myservice.js"></script>
+        <script src="scripts/controllers/account.js"></script>
         <!-- endbuild -->
 </body>
 </html>
