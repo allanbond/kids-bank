@@ -24,6 +24,11 @@ angular
         controller: 'AccountCtrl',
         controllerAs: 'accountCtrl'
       })
+      .when('/editAccount/:id', {
+        templateUrl: 'views/edit-account.html',
+        controller: 'AccountCtrl',
+        controllerAs: 'accountCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

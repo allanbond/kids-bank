@@ -1,6 +1,9 @@
 <div class="container-fluid kb-title-bar">
   <div class="row">
-    <div class="col-xs-12"><h3 class="kb-title">Add an Account</h3></div>
+    <div class="col-xs-12"><h3 class="kb-title">
+      <span ng-hide="accountCtrl.editFlag">Create</span> 
+      <span ng-show="accountCtrl.editFlag">Edit</span>
+      an Account</h3></div>
   </div>
 </div>
 <form class="form-horizontal clearfix">
