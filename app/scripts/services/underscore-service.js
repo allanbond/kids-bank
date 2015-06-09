@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('kidsBankApp')
-	.service('_', function($window) {
+	.factory('_', function($window) {
 		return $window._;	
 	});

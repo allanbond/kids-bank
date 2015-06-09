@@ -31,20 +31,3 @@
     <button class="btn btn-link pull-right" ng-click="accountCtrl.save()">Save</button>
   </div>
 </form>
-    
-<div class="container-fluid kb-profile">
-  <div class="row">
-    <div class="col-xs-2">
-      <img ng-src="{{accountCtrl.account.avatar}}" class="kb-avatar" />
-    </div>
-    <div class="col-xs-3">
-      {{accountCtrl.account.name}}
-    </div>
-    <div class="col-xs-3">
-      {{accountCtrl.account.dob | date: 'MM/dd/yyyy'}} 
-    </div>
-    <div class="col-xs-4">
-      {{accountCtrl.account.allowance}}
-    </div>  
-  </div>
-</div>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('kidsBankApp')
-	.factory('accountService', function() {
+	.factory('accountService', function(_) {
 		var serviceInstance;
 		serviceInstance = {
 			save: function(account) {
@@ -14,7 +14,7 @@ angular.module('kidsBankApp')
 				else {
 					accounts = JSON.parse(accounts);
 				}
-				
+
 				if (! account.id) {
 					// create an id (for new accounts)
 					var id = new Date().getTime();
@@ -24,16 +24,23 @@ angular.module('kidsBankApp')
 				else {
 					accounts[account.id] = account;
 				}
-				
+
 				// save the accounts back to local storage				
 				localStorage.setItem('kb.accounts', JSON.stringify(accounts));
 			},
 			get: function(accountId) {
-				var accounts = localStorage.getItem('kb.accounts');
-				var account = accounts ? JSON.parse(accounts)[accountId] : undefined;
-				account.dob = new Date(account.dob);	// convert from string to date
+				var accounts = JSON.parse(localStorage.getItem('kb.accounts'));
+
+				_.each(accounts, function(value) {
+					value.dob = new Date(value.dob);
+				});
 				
-				return account;
+				if (accountId) {
+					return accounts[accountId];
+				}
+				else {
+					return accounts;
+				}
 			}
 		}
 		

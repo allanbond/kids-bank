@@ -19,6 +19,11 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'views/account-list.html',
+        controller: 'AccountListCtrl',
+        controllerAs: 'accountListCtrl'
+      })
       .when('/createAccount', {
         templateUrl: 'views/edit-account.html',
         controller: 'AccountCtrl',
