@@ -8,7 +8,7 @@
  * Controller of the kidsBankApp
  */
 angular.module('kidsBankApp')
-  .controller('AccountCtrl', function ($scope, $log, $routeParams, accountService) {
+  .controller('AccountCtrl', function ($scope, $log, $routeParams, $window, accountService) {
     this.account = {};
     
     if ($routeParams.id) {
@@ -19,5 +19,10 @@ angular.module('kidsBankApp')
     this.save = function () {
       accountService.save(this.account);
       $log.debug('Account saved!');
-    }
+      $window.history.back();
+    };
+    
+    this.cancel = function() {
+      $window.history.back();
+    };
   });

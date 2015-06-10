@@ -1,12 +1,24 @@
 <div class="container-fluid kb-title-bar">
   <div class="row">
-    <div class="col-xs-12"><h3 class="kb-title">
+    <div class="col-xs-7"><h3 class="kb-title">
       Accounts
   	</div>
+    <div class="col-xs-5">
+      <div class="pull-right" ng-show="accountListCtrl.selectedAccount">
+        <i class="md md-edit" ng-click="accountListCtrl.editAccount()"></i>
+        <i class="md md-delete" ng-click="accountListCtrl.deleteAccount()"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="kb-empty-account-list" ng-if="!accountListCtrl.accounts">
+  <div class="container-fluid">
+    <h1>It's lonely in here!</h3>
+    <h2>Add a new account by clicking the add button below.</h5>
   </div>
 </div>
 <div id="kb-account-list" ng-repeat="account in accountListCtrl.accounts">
-	<div class="container-fluid kb-profile">
+	<div class="container-fluid kb-profile" ng-click="accountListCtrl.selectAccount(account)"  ng-class="{active: accountListCtrl.selectedAccount === account}">
 	  <div class="row">
 	    <div class="col-xs-2">
 	      <img ng-src="{{account.avatar}}" class="kb-avatar" />
@@ -16,4 +28,8 @@
 	    </div>
 	  </div>
 	</div>
+</div>
+
+<div class="kb-action-btn" ng-click="accountListCtrl.createAccount();">
+  <i class="md md-add"></i>
 </div>

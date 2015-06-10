@@ -85,11 +85,19 @@ body {
 .kb-title-bar {
   background-color: #2196F3;
   color: rgba(255,255,255,.87);
+  height: 56px;
+  line-height: 48px;
+}
+
+.kb-title-bar i {
+  font-size: 2em;
+  margin-left: .5em;
 }
 
 h3.kb-title {
   margin-top: 6px;
   margin-bottom: 6px;
+  line-height: 43px;
 }
 
 .btn-link {
@@ -102,10 +110,33 @@ h3.kb-title {
   line-height: 75px;
 }
 
+.kb-profile.active {
+  background-color: #E0E0E0;
+}
+
 .kb-profile .kb-avatar {
   height: 75px;
 }
 
 .kb-profile .kb-account-name {
   margin-left: .8em;
+}
+
+.kb-action-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #EF6C00;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  text-align: center;
+  color: rgba(255,255,255,.97);
+  font-size: 3em;
+  box-shadow: 1px 5px 10px rgba(0,0,0,.5);
+  cursor: pointer; 
+}
+
+.kb-empty-account-list {
+  color: rgba(0,0,0,.5);
 }

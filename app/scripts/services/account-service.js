@@ -28,6 +28,19 @@ angular.module('kidsBankApp')
 				// save the accounts back to local storage				
 				localStorage.setItem('kb.accounts', JSON.stringify(accounts));
 			},
+			delete: function(account) {
+				var accounts = localStorage.getItem('kb.accounts');
+				
+				// init accounts in local storage (if needed)
+				if (accounts) {
+					accounts = JSON.parse(accounts);
+				}
+				
+				delete accounts[account.id];
+				
+				// save the accounts back to local storage				
+				localStorage.setItem('kb.accounts', JSON.stringify(accounts));
+			},
 			get: function(accountId) {
 				var accounts = JSON.parse(localStorage.getItem('kb.accounts'));
 
