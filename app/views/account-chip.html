@@ -1,4 +1,4 @@
-<div class="container-fluid kb-profile" ng-click="accountListCtrl.selectAccount(account)"  ng-class="{active: accountListCtrl.selectedAccount === account}">
+<div class="container-fluid kb-profile" ng-click="selectAccount()(account)">
   <div class="row">
     <div class="col-xs-2">
       <img ng-src="{{account.avatar}}" class="kb-avatar" />

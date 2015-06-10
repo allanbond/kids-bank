@@ -11,6 +11,10 @@ angular.module('kidsBankApp')
     return {
       templateUrl: 'views/account-chip.html',
       restrict: 'A',
+      scope: {
+        account: '=',
+        selectAccount: '&'
+      },
       link: function postLink(scope, element, attrs) {
 
       }

@@ -26,9 +26,9 @@ angular.module('kidsBankApp')
         $log.debug('Deleted Accounts: ' +  deletedAccounts);
     });
     
-    this.selectAccount = function(account) {
+    this.selectAccount = angular.bind(this, function(account) {
       this.selectedAccount = account;
-    };
+    });
     
     this.createAccount = function() {
       $location.url("/createAccount");

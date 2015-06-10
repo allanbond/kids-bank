@@ -18,7 +18,7 @@
   </div>
 </div>
 <div id="kb-account-list" ng-repeat="account in accountListCtrl.accounts">
-  <div account-chip></div>
+  <div account-chip account="account" select-account="accountListCtrl.selectAccount" ng-class="{active: accountListCtrl.selectedAccount === account}"></div>
 </div>
 
 <div class="kb-action-btn" ng-click="accountListCtrl.createAccount();">

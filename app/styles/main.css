@@ -110,7 +110,7 @@ h3.kb-title {
   line-height: 75px;
 }
 
-.kb-profile.active {
+[account-chip].active {
   background-color: #E0E0E0;
 }
 

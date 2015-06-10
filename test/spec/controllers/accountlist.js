@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: AccountlistCtrl', function () {
+xdescribe('Controller: AccountlistCtrl', function () {
 
   // load the controller's module
   beforeEach(module('kidsBankApp'));
